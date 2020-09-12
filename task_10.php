@@ -19,7 +19,6 @@
     </head>
     <body class="mod-bg-1 mod-nav-link ">
         <main id="js-page-content" role="main" class="page-content">
-
             <div class="col-md-6">
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
@@ -31,22 +30,16 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
-                    <?php
-                    $simpleinput = $_POST['simpleinput'];
-                    $pdo = new PDO("mysql:host=localhost;dbname=marlin_less", "root", "root");
-                    $sql = "INSERT INTO text_table (text_field) VALUES (' $simpleinput ');";
-                    $statement = $pdo->prepare($sql);
-                    $statement->execute();
-                    $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                    ?>
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
-                                    <form action="" method="post">
+                                    <div class="alert alert-danger fade show" role="alert">
+                                        You should check in on some of those fields below.
+                                    </div>
+                                    <form action="">
                                         <label class="form-label" for="simpleinput">Text</label>
-                                        <input type="text" name="simpleinput" id="simpleinput" class="form-control">
+                                        <input type="text" id="simpleinput" class="form-control">
                                         <button class="btn btn-success mt-3">Submit</button>
                                     </form>
                                 </div>
