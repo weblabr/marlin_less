@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,22 +34,12 @@ session_start();
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
-                                    <?php if(isset($_SESSION['error_message'])) :?>
                                     <div class="alert alert-danger fade show" role="alert">
-                                        <?php echo $_SESSION['error_message']; unset($_SESSION['error_message']);?>
+                                        You should check in on some of those fields below.
                                     </div>
-                                    <?php endif;?>
-
-                                    <?php if(isset($_SESSION['success'])) :?>
-                                        <div class="alert alert-success fade show" role="alert">
-                                            <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
-                                        </div>
-                                    <?php endif;?>
-
-
-                                    <form action="save_10.php" method="post">
+                                    <form action="">
                                         <label class="form-label" for="simpleinput">Text</label>
-                                        <input type="text" name="simpleinput" id="simpleinput" class="form-control">
+                                        <input type="text" id="simpleinput" class="form-control">
                                         <button class="btn btn-success mt-3">Submit</button>
                                     </form>
                                 </div>
