@@ -48,8 +48,6 @@ session_start();
                                             <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
                                         </div>
                                     <?php endif;?>
-
-
                                     <form action="save_10.php" method="post">
                                         <label class="form-label" for="simpleinput">Text</label>
                                         <input type="text" name="simpleinput" id="simpleinput" class="form-control">
